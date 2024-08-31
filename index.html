@@ -49,6 +49,14 @@
             margin-bottom: 20px;
             line-height: 1.6;
             color: #333;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #notes hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
         }
 
         button {
@@ -111,7 +119,9 @@
             { title: "Ternary Operators", content: `Ternary operators let you write a conditional/if statement using "?" and ":". ? is used first and if the condition is true, the code after ? is executed, if its false, the code after : is executed. For example:
 
 let HackClubIsCool = true;
-HackClubIsCool ? console.log('Hack Club is cool!') : console.log('Hack Club is not cool');` },
+HackClubIsCool ? console.log('Hack Club is cool!') : console.log('Hack Club is not cool');
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Else If Statements", content: `After an if block, you can add an else if block that checks one new condition each time. You can add an else block after the else if blocks to execute a different piece of code if none of the conditions are true. For example:
 
 let BestHackClubReviewer = 'Devlos'
@@ -125,7 +135,9 @@ if (BestHackClubReviewer === 'fayd') {
   console.log('Devlos is the best reviewer!');
 } else {
   console.log('No one is a good reviewer );');
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The Switch Keyword", content: `The switch keyword checks for multiple conditions like the else if block, but instead of checking for one condition each time, it checks for multiple and is easier to write. For example:
 
 let HackClubFounder = 'Zach Latta';
@@ -141,27 +153,37 @@ switch (HackClubFounder) {
     break;
   default:
     console.log('There is no founder ):');
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Function Declaration", content: `In function declaration, you can declare a function with a name and parameters. They can be called using their name within the code. For example:
 
 const HackClubInfo = "Hack Club is a coding club from Shelburne, Vermont. Learn more at hackclub.com"
 function ReturnHackClubInfo() {
   console.log(HackClubInfo)
 }
-ReturnHackClubInfo();` },
+ReturnHackClubInfo();
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Calling Functions", content: `You can call a function by inputting its name, followed by ();. For example:
 
-ReturnHackClubInfo();` },
+ReturnHackClubInfo();
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Parameters and Arguments", content: `Parameters are variables used in function creation. Arguments are values passed to a function if it's called. For example:
 
 function returnPrizes(prizes) {
  return \`Here are the Hack Club prizes: \${prizes}\`
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Default Parameters", content: `Default parameters let a function have a certain value if no parameters are given. For example:
 
 function writeHackClubHQAddress(line1 = "Falls Rd" , line2 = "Shelburne" , line3 = "Vermont") {
   console.log("Hack Club HQ is at " + line1 + ", " + line2 + ", " + line3 + ".")
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Return Keyword", content: `The return keyword is used to return a value from a function at the location where it's called. For example:
 
 let currentyear = 2024
@@ -169,7 +191,9 @@ let birthyear = 2018
 
 function findDrakeAndHisWifesAge(currentyear, birthyear) {
   return currentyear - birthyear;
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Helper Functions", content: `Helper functions are functions that are used inside other functions to help them do their job. For example:
 
 function multiplyByNineFifths(number) {
@@ -178,27 +202,37 @@ function multiplyByNineFifths(number) {
 
 function getFahrenheit(celsius) {
   return multiplyByNineFifths(celsius) + 32;
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Function Expressions", content: `Function expressions are functions that are created in another expression/variable. For example:
 
 const zach = function() {
   return 'Zach Latta';
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Arrow Functions", content: `Arrow functions are functions that are created in another expression/variable. For example:
 
 const sum = (firstParameter, secondParameter) => { 
   return firstParameter + secondParameter; 
-};` },
+};
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Concise Body Arrow Functions", content: `Concise Body Arrow Functions are the most condensed form of body arrow functions. For example:
 
 const iNeedSleep = (time) => {
   return time === '9:00' ? 'I need to sleep!' : 'No sleep.'
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Scopes", content: `Scopes are used to show where a certain variable or function is accessible. There are types of scopes like global scopes. Here's a practical example:
 
 function lol() {
   var cat = "cute";
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Block Scoped Variables", content: `Block scoped variables are variables that are only accessible within their own block of code. Here is an example code snippet:
 
 const isLoggedIn = true;
@@ -209,7 +243,9 @@ if (isLoggedIn == true) {
 
 console.log(statusMessage);
 
-// Uncaught ReferenceError: statusMessage is not defined` },
+// Uncaught ReferenceError: statusMessage is not defined
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Global Variables", content: `Variables expressed outside of a block or function are Global Variables. They can be used anywhere in code. For example:
 
 const hackClubFounder = 'zach';
@@ -218,38 +254,54 @@ function printFounderName() {
   console.log(hackClubFounder);
 }
 
-printFounderName();` },
+printFounderName();
+
+----------------------------------------------------------------------------------------------------` },
             { title: "To Create an Array", content: `An array is basically a list or collection of items in Javascript. A main way to create an array is to surround the items in square brackets. Here is an example:
 
-const arcadePrizes = ['Frameworks', 'IPads', 'MacBooks', 'Stickers', 'Soldering Irons']` },
+const arcadePrizes = ['Frameworks', 'IPads', 'MacBooks', 'Stickers', 'Soldering Irons']
+
+----------------------------------------------------------------------------------------------------` },
             { title: "To Access an Array", content: `To access an array, you can use the index number of the item you want to access. The index number starts at zero, so the first item is assigned to index 0. Here is an example:
 
 const planets = ['Mercury', 'Venus', 'Earth', 'Mars']
-console.log(planets[0]) // this will print mercury` },
+console.log(planets[0]) // this will print mercury
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Update Elements", content: `To update an element in an array, you can use the index number of the element you want to update. Here is an example:
 
 const OS = ['Windows', 'MacOS', 'Linux']
-OS[1] = 'IOS'` },
+OS[1] = 'IOS'
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Arrays with const and let", content: `Arrays with const and let are almost the same. The difference is that const variables cannot be updated, while variables using let can. Here is an example:
 
 let rats = ['Cuddly', 'Scary', 'Disease Superspreaders']
 rats[2] = 'Awesome'
-// re-assigned` },
+// re-assigned
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .length Property", content: `The .length property is one of the properties of an array that when called returns the value of the amount of elements in the array. Here is a demonstration:
 
 const myProjects = ["Random Generator", "Cat Photo Generator", "Discord Bot"]
 console.log(myProjects.length)
-// logs 3` },
+// logs 3
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .push Method", content: `The .push Method is a method we can add to an array to add an element to the end of an array. Here is an example:
 
 const myArray = ['a', 'b', 'c', 'd']
-myArray.push('e')` },
+myArray.push('e')
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .pop Method", content: `The .pop Method is a method we can use in an array to remove the last element of the array. (It removes the last array element). Here is an example:
 
 const numbers = ['1', '2', '3']
 numbers.pop()
 console.log(numbers)
-// logs only 1 and 2` },
+// logs only 1 and 2
+
+----------------------------------------------------------------------------------------------------` },
             { title: "More Array Methods", content: `There are wayyy more array methods that can be used other than the main useful ones like .pop and .push. Here is a list of a few:
 - .unshift
 - .join
@@ -262,29 +314,39 @@ Here is an example:
 
 const greetings = ["Hello", "Aloha", "Bonjour", "Hola", "Salam", "Ciao", "Konichiwa"]
 greetings.shift();
-// removes the first element, hello` },
+// removes the first element, hello
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Repeating Tasks Manually", content: `Loops help us repeat an action for as long as we want, and otherwise we would have to write the same code over and over and OVER AGAIN. Loops help us automate our program. Here's a simple example of having to write the same code over and over:
 
 var vacationSpots = ["NYC", "London", "Tokyo"]
 console.log(vacationSpots[0]);
 console.log(vacationSpots[1])
 console.log(vacationSpots[2])
-// we had to write it over and over! that was painful and inefficient` },
+// we had to write it over and over! that was painful and inefficient
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The For Loop", content: `Loops help a lot with efficiency. We can write a loop that repeats an action until a condition is met using the "for" keyword which basically means "for as long as". Here's an example:
 
 for (let i = 5; i < 7; i++) {
   console.log(i)
 }
-// here, we declared "i" a variable. we set it to 5. then we said that as long as "i" is not greater than 7, it should keep increasing by 1, and at the end console.log "i".` },
+// here, we declared "i" a variable. we set it to 5. then we said that as long as "i" is not greater than 7, it should keep increasing by 1, and at the end console.log "i".
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Looping in Reverse", content: `We can also loop in reverse if need be by using the for keyword and setting the variable greater than your desired number. You have to use "--". Here's an example:
 
-for (let i = 3; i > 0; i--)` },
+for (let i = 3; i > 0; i--)
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Looping Through Arrays", content: `Arrays often hold some important information for our program. We can loop through them to access each element. Heres an example:
 
 const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
 for (let i = 0; i < animals.length; i++){
   console.log(animals[i]);
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Nested Loops", content: `It is possible to nest and put loops inside of other loops. This is very useful. Here is an example:
 
 const myArray = [6, 19, 20];
@@ -295,13 +357,17 @@ for (let i = 0; i < myArray.length; i++) {
       console.log('Both arrays have the number: ' + yourArray[j]);
     }
   }
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The While Loop", content: `The while loop is very similar to the "for" loop. It is also used to continue a certain action until a condition is met. Here is an example of it:
 
 while (counterTwo < 4) {
   console.log(counterTwo);
   counterTwo++;
-}` },
+}
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Do While Statements", content: `Sometimes you need to run a piece of code more than one time based on a certain condition being present. You can do this with "do while" statements. Here is an example of them:
 
 var amountOfCatPetsTheCatWants = 5;
@@ -309,7 +375,9 @@ var currentCatPets = 0;
 
 do {
   currentCatPets++
-} while (currentCatPets < amountOfCatPetsTheCatWants)` },
+} while (currentCatPets < amountOfCatPetsTheCatWants)
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The Break Keyword", content: `The break keyword is used to stop a loop from continuing to run. Here is an example of it's use:
 
 for (let i = 0; i < 99; i++) {
@@ -319,12 +387,16 @@ for (let i = 0; i < 99; i++) {
   console.log('Banana.');
 }
 
-console.log('Orange you glad I broke out the loop!');` },
+console.log('Orange you glad I broke out the loop!');
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Functions as Data", content: `Functions are really useful. Sometimes they have a very long name which makes code confusing, which we should avoid. Here is an example:
 
 const announceThatIAmDoingImportantWork = () => {
     console.log("I'm doing very important work!");
-};` },
+};
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Functions as Parameters", content: `A parameter is a placeholder for the data/argument you pass in to a function. You can also use functions as parameters! These are called higher-order functions. Here is an example of them:
 
 const higherOrderFunc = param => {
@@ -336,31 +408,41 @@ const anotherFunc = () => {
   return "I'm being invoked by the higher-order function!";
 }
 
-higherOrderFunc(anotherFunc);` },
+higherOrderFunc(anotherFunc);
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .forEach() Function", content: `The .forEach() function is an iterator used to execute the same code for each element. Here is an example of it:
 
-groceries.forEach(groceryItem => console.log(groceryItem));` },
+groceries.forEach(groceryItem => console.log(groceryItem));
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .map() Method", content: `The .map() method is used to transform each element in an array. When it is called on an array, it takes an argument of a callback function and returns a new array. Here is an example of this method:
 
 const numbers = [1, 2, 3, 4, 5]; 
 
 const bigNumbers = numbers.map(number => {
   return number * 10;
-});` },
+});
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .filter() Method", content: `The .filter() method, like the .map() method, is used to adjust elements in an array. The .filter() method is used to return certain values in an array that match a condition. Here is an example of it: 
 
 const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
 
 const shortWords = words.filter(word => {
   return word.length < 6;
-});` },
+});
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .findIndex Method", content: `The .findIndex() method is a useful method that returns the index of the first element in an array that matches the provided condition. Here's an example:
 
 const jumbledNums = [123, 25, 78, 5, 9]; 
 
 const lessThanTen = jumbledNums.findIndex(num => {
   return num < 10;
-});` },
+});
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .reduce() Method", content: `The .reduce() method is used to iterate through the components of an array until it reaches the end and returns a value. Here is an example:
 
 const numbers = [1, 2, 4, 10];
@@ -369,28 +451,38 @@ const summedNums = numbers.reduce((accumulator, currentValue) => {
   return accumulator + currentValue
 })
 
-console.log(summedNums)` },
+console.log(summedNums)
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .some() method", content: `The .some() method is used to iterate through an array and return a boolean (true or false) value based on a condition being met. Here is an example:
 
 const words = ["Ambitious", "Unique", "Cool"];
-console.log(words.some(word => word.length > 6))` },
+console.log(words.some(word => word.length > 6))
+
+----------------------------------------------------------------------------------------------------` },
             { title: "The .filter() method", content: `The .filter() method is used to iterate through an array and return a new array that contains the items that matched the condition. Here is an example of it:
 
 const words = ["Ambitious", "Unique", "Cool"]
-console.log(words.filter(word => word.length > 6))` },
+console.log(words.filter(word => word.length > 6))
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Creating Object Literals", content: `Object literals are a way to create objects in javascript. Objects can be assigned to any variables and store data. They are made using curly brackets: {}. Here is an example of them:
 
 let spaceship = {
   'Fuel Type': 'diesel',
   color: 'silver'
-};` },
+};
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Accessing Object Properties", content: `We can access object properties using dot notation mainly. Here is an example:
 
 let spaceship = {
   homePlanet: 'Earth',
   color: 'silver'
 };
-spaceship.homePlanet;` },
+spaceship.homePlanet;
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Accessing Object Properties using Bracket Notation", content: `We can also access object properties using bracket notation. Here is an example of it:
 
 let spaceship = {
@@ -399,7 +491,9 @@ let spaceship = {
   homePlanet: 'Earth',
   numCrew: 5
 };
-spaceship['Active Duty'];` },
+spaceship['Active Duty'];
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Property Assignment", content: `A cool thing about objects in javascript is that we can re-assign their properties in a similar way to being able to re-assign let variables. Here is an example:
 
 const spaceship = {
@@ -408,14 +502,18 @@ const spaceship = {
   mission: 'Explore the universe' 
 };
 // You can also delete object properties like this:
-delete spaceship.mission;` },
+delete spaceship.mission;
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Methods", content: `Methods are when functions are stored in objects. These functions can be called later in the code. Here is an example of them:
 
 const alienShip = {
   invade: function () { 
     console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
   }
-};` },
+};
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Nested Objects", content: `Nested objects are objects that are stored in other objects using {}. Here is an example:
 
 const spaceship = {
@@ -444,7 +542,9 @@ const spaceship = {
            terabytes: 50
          }
     }
-};` },
+};
+
+----------------------------------------------------------------------------------------------------` },
             { title: "Pass By Reference", content: `Passing by reference is when you pass an object into a function and then the function can change the object. Here is an example:
 
 const spaceship = {
@@ -458,7 +558,9 @@ let paintIt = obj => {
 
 paintIt(spaceship);
 
-spaceship.color` }
+spaceship.color
+
+----------------------------------------------------------------------------------------------------` }
         ];
 
         let currentSection = 0;
